@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card z-depth-2" style="margin-top: 20px">    
+    <div class="card-title" style="padding-top: 15px; margin-left: 15px">Informação do Cliente</div>    
+        <div class="card-content">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="nome" type="text" readonly value="{{ cliente.nome }}">
+                    <label for="nome">Nome</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="email" type="email" readonly value="{{ cliente.email }}">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <a href="{% url 'index' %}" class="waves-effect waves-light btn-small deep-purple">Voltar</a> 
+            
+        </div>        
+</div>
+
+{% endblock %}

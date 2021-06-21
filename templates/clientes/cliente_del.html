@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="card z-depth-2" style="margin-top: 20px">
+    <div class="card-title" style="padding-top: 15px; margin-left: 15px">Apagar Cliente?</div>   
+        <div class="card-content">
+            <form action="" method="post">
+                {% csrf_token %}
+                <p>Tem certeza que deseja deletar o cliente <span class="red-text">{{ object }}</span>??</p>
+                <br>       
+                <button class="btn-small waves-effect waves-light red" type="submit" name="action">Confirmar</button>
+                <a href="{% url 'index' %}" class="waves-effect waves-light btn-small deep-purple">Cancelar</a>
+            </form>
+        </div>
+   
+</div>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+.card{
+    border-radius: 10px;
+}
+.card-title {
+    padding-top: 25px !important;
+
+}
+
+body{
+    background-color: aqua !important;
+}

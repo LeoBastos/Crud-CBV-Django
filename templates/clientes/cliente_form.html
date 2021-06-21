@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card z-depth-2" style="margin-top: 20px">    
+    <div class="card-title" style="padding-top: 15px; margin-left: 15px">Cadastrar Cliente</div>    
+        <div class="card-content">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <br>                
+                <button class="btn-small waves-effect waves-light blue" type="submit" name="action">Salvar</button>
+                <a href="{% url 'index' %}" class="waves-effect waves-light btn-small deep-purple">Cancelar</a>
+            </form>
+        </div>
+    
+</div>
+
+{% endblock %}

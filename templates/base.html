@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Crud</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">        
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="#">Agendamentos</a></li>
+                <li><a href="{% url 'index' %}">Clientes</a></li>
+                <li><a href="#">Serviços</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+       
+        {% block content %}{% endblock %}
+    </div>
+
+    <div class="fixed-action-btn">
+        <a href="{% url 'add_cliente' %}"  class="btn-floating pulse btn-large waves-effect waves-light purple darken-3"><i class="material-icons">add</i></a>
+    </div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+</body>
+</html>
